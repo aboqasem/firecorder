@@ -1,5 +1,6 @@
 # User
 deploy
+android/app/google-services.json
 
 # Miscellaneous
 *.class
