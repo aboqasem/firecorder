@@ -1,18 +1,18 @@
 import 'dart:math';
 
-import 'package:firecorder/screens/welcome_screen/email_field.dart';
-import 'package:firecorder/screens/welcome_screen/login_button.dart';
-import 'package:firecorder/screens/welcome_screen/password_field.dart';
-import 'package:firecorder/screens/welcome_screen/sign_up_button.dart';
+import 'package:firecorder/screens/authentication_screen/email_field.dart';
+import 'package:firecorder/screens/authentication_screen/login_button.dart';
+import 'package:firecorder/screens/authentication_screen/password_field.dart';
+import 'package:firecorder/screens/authentication_screen/sign_up_button.dart';
 import 'package:firecorder/utils/helpers.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatefulWidget {
+class AuthenticationScreen extends StatefulWidget {
   @override
-  _WelcomeScreenState createState() => _WelcomeScreenState();
+  _AuthenticationScreenState createState() => _AuthenticationScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _AuthenticationScreenState extends State<AuthenticationScreen> {
   String email;
   String password;
 

@@ -1,4 +1,4 @@
-import 'package:firecorder/screens/welcome_screen.dart';
+import 'package:firecorder/screens/authentication_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(FiRecorder());
@@ -11,7 +11,7 @@ class FiRecorder extends StatelessWidget {
       theme: ThemeData.light(),
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => WelcomeScreen(),
+        '/': (BuildContext context) => AuthenticationScreen(),
       },
     );
   }
