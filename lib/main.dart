@@ -8,7 +8,7 @@ class FiRecorder extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'FiRecorder',
-      theme: ThemeData.dark(),
+      theme: ThemeData.light(),
       initialRoute: '/',
       routes: {
         '/': (BuildContext context) => WelcomeScreen(),
