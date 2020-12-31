@@ -46,4 +46,12 @@ class AuthService {
     }
     return userCredential;
   }
+
+  Future<void> logout() async {
+    try {
+      await _auth.signOut();
+    } catch (e) {
+      print(e);
+    }
+  }
 }
