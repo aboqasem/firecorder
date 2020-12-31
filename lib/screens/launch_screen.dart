@@ -1,9 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firecorder/screens/launch_screen/error_text.dart';
+import 'package:firecorder/screens/launch_screen/launch.dart';
 import 'package:firecorder/screens/launch_screen/loading_spinner.dart';
 import 'package:firecorder/screens/widgets/logo.dart';
+import 'package:firecorder/services/auth_service.dart';
 import 'package:firecorder/utils/helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LaunchScreen extends StatefulWidget {
   @override
@@ -16,9 +20,14 @@ class _LaunchScreenState extends State<LaunchScreen> {
   void initializeFlutterFire() async {
     try {
       await Firebase.initializeApp();
-      setState(() {
-        _isLoading = false;
-      });
+      Navigator.pushReplacement(context, MaterialPageRoute(
+        builder: (BuildContext context) {
+          return StreamProvider<User>.value(
+            value: AuthService().userStream,
+            child: Launch(),
+          );
+        },
+      ));
     } catch (e) {
       setState(() {
         _isLoading = false;
@@ -46,12 +55,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
                 ? LoadingSpinner()
                 : _isError
                     ? ErrorText()
-                    : Text(
-                        'Initialized.',
-                        style: TextStyle(
-                          fontSize: viewHeight(context, 2),
-                        ),
-                      ),
+                    : null,
           ],
         ),
       ),
