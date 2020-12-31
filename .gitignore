@@ -1,8 +1,3 @@
-# User
-deploy
-android/app/google-services.json
-ios/Runner/GoogleService-Info.plist
-
 # Miscellaneous
 *.class
 *.log

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "775544151452",
+    "project_id": "firecorder",
+    "storage_bucket": "firecorder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775544151452:android:9d907bc5e0bf13116cbc59",
+        "android_client_info": {
+          "package_name": "aboqasem.firecorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775544151452-umrk752m22b3p24h9gf27925hni6f72k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVqzk2LDTuMY2UkNZErieN2DqOkmfibJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775544151452-umrk752m22b3p24h9gf27925hni6f72k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
