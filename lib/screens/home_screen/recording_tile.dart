@@ -13,11 +13,13 @@ class RecordingTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: EdgeInsets.zero,
-      title: Text(name),
-      trailing: isPlaying ? Icon(Icons.pause, color: Colors.black) : null,
-      onTap: onTap,
-    );
+    return Column(children: [
+      ListTile(
+        title: Text(name),
+        trailing: isPlaying ? Icon(Icons.pause, color: Colors.black) : null,
+        onTap: onTap,
+      ),
+      Divider(),
+    ]);
   }
 }
