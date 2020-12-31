@@ -17,9 +17,9 @@ class SignUpButton extends StatelessWidget {
       style: OutlinedButton.styleFrom(
         primary: Colors.black,
         minimumSize: Size(viewWidth(context, 100), viewHeight(context, 5)),
-        side: BorderSide(width: 2.0, color: Colors.black),
+        side: BorderSide(width: 2, color: Colors.black),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
+          borderRadius: BorderRadius.circular(30),
         ),
       ),
     );

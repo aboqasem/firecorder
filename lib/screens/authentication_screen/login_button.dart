@@ -19,7 +19,7 @@ class LoginButton extends StatelessWidget {
           onPrimary: Colors.white,
           minimumSize: Size(viewWidth(context, 110), viewHeight(context, 5)),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0),
+            borderRadius: BorderRadius.circular(30),
           )),
     );
   }
