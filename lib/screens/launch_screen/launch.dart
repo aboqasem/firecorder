@@ -8,6 +8,7 @@ class Launch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final User user = Provider.of<User>(context);
+    if (user != null) user.reload();
     if (user == null) return AuthenticationScreen();
     return HomeScreen();
   }
