@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
+    return ChangeNotifierProvider<RecordingsDatabase>(
         create: (BuildContext context) => RecordingsDatabase(),
         child: Scaffold(
           appBar: AppBar(
