@@ -1,4 +1,6 @@
+import 'package:firecorder/models/audio_file.dart';
 import 'package:firecorder/models/recordings_database.dart';
+import 'package:firecorder/screens/home_screen/actions_panel.dart';
 import 'package:firecorder/screens/home_screen/recordings_list_view.dart';
 import 'package:firecorder/screens/home_screen/recordings_panel.dart';
 import 'package:firecorder/services/auth_service.dart';
@@ -14,6 +16,9 @@ class HomeScreen extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<RecordingsDatabase>(
           create: (BuildContext context) => RecordingsDatabase(),
+        ),
+        ChangeNotifierProvider<AudioFile>(
+          create: (BuildContext context) => AudioFile(),
         ),
       ],
       child: Scaffold(
@@ -33,6 +38,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             RecordingsPanel(listView: RecordingsListView()),
+            ActionsPanel(),
           ],
         ),
       ),
