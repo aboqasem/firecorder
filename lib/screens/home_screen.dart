@@ -10,27 +10,32 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<RecordingsDatabase>(
-        create: (BuildContext context) => RecordingsDatabase(),
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text('Recordings'),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.logout),
-                tooltip: 'Logout',
-                onPressed: () async {
-                  await _auth.logout();
-                },
-              ),
-            ],
-          ),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              RecordingsPanel(listView: RecordingsListView()),
-            ],
-          ),
-        ));
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<RecordingsDatabase>(
+          create: (BuildContext context) => RecordingsDatabase(),
+        ),
+      ],
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Recordings'),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.logout),
+              tooltip: 'Logout',
+              onPressed: () async {
+                await _auth.logout();
+              },
+            ),
+          ],
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            RecordingsPanel(listView: RecordingsListView()),
+          ],
+        ),
+      ),
+    );
   }
 }
