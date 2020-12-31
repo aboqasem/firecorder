@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firecorder/screens/launch_screen/error_text.dart';
+import 'package:firecorder/screens/launch_screen/loading_spinner.dart';
 import 'package:firecorder/screens/widgets/logo.dart';
 import 'package:firecorder/utils/helpers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LaunchScreen extends StatefulWidget {
   @override
@@ -40,22 +41,11 @@ class _LaunchScreenState extends State<LaunchScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Logo(),
-            SizedBox(
-              height: viewHeight(context, 10),
-            ),
+            SizedBox(height: viewHeight(context, 10)),
             _isLoading
-                ? SpinKitCircle(
-                    color: Colors.black,
-                    size: viewHeight(context, 5),
-                  )
+                ? LoadingSpinner()
                 : _isError
-                    ? Text(
-                        'An error occurred while initializing the app.',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: viewHeight(context, 2),
-                        ),
-                      )
+                    ? ErrorText()
                     : Text(
                         'Initialized.',
                         style: TextStyle(
