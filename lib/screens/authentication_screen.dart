@@ -1,9 +1,8 @@
-import 'dart:math';
-
 import 'package:firecorder/screens/authentication_screen/email_field.dart';
 import 'package:firecorder/screens/authentication_screen/login_button.dart';
 import 'package:firecorder/screens/authentication_screen/password_field.dart';
 import 'package:firecorder/screens/authentication_screen/sign_up_button.dart';
+import 'package:firecorder/screens/widgets/logo.dart';
 import 'package:firecorder/utils/helpers.dart';
 import 'package:flutter/material.dart';
 
@@ -25,13 +24,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Icon(
-              Icons.graphic_eq,
-              size: min(
-                viewWidth(context, 50),
-                viewHeight(context, 50),
-              ),
-            ),
+            Logo(),
             SizedBox(height: viewHeight(context, 5)),
             EmailField(
               onChanged: (String text) {

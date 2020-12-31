@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firecorder/screens/widgets/logo.dart';
 import 'package:firecorder/utils/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -38,10 +39,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.graphic_eq,
-              size: viewWidth(context, 50),
-            ),
+            Logo(),
             SizedBox(
               height: viewHeight(context, 10),
             ),
