@@ -5,8 +5,11 @@ class Recording {
   final String _url;
   bool _isPlaying;
 
-  Recording({@required String name, @required url, bool isPlaying = false})
-      : _name = name,
+  Recording({
+    @required String name,
+    @required String url,
+    bool isPlaying = false,
+  })  : _name = name,
         _url = url,
         _isPlaying = isPlaying;
 
