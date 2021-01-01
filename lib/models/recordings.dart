@@ -11,7 +11,7 @@ class Recordings {
       UnmodifiableMapView(_recordings);
 
   void add(Recording recording) {
-    _recordings[recording.name] = recording;
+    _recordings[recording.name] = _recordings[recording.name] ?? recording;
   }
 
   void toggleStateOf(String name) {
