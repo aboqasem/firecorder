@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Recording {
-  String _name;
+  final String _name;
+  final String _url;
   bool _isPlaying;
 
-  Recording({@required String name, bool isPlaying = false})
+  Recording({@required String name, @required url, bool isPlaying = false})
       : _name = name,
+        _url = url,
         _isPlaying = isPlaying;
 
   String get name => _name;
+
+  String get url => _url;
 
   bool get isPlaying => _isPlaying;
 
