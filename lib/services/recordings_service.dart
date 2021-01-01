@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 class RecordingsService extends ChangeNotifier {
   final Recordings _recordings = Recordings();
+  bool isWatching = false;
 
   int get count => _recordings.length;
 
