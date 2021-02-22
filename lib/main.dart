@@ -9,6 +9,7 @@ class FiRecorder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'FiRecorder',
       theme: ThemeData.light().copyWith(
         appBarTheme: AppBarTheme(
